@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;1,300&family=Lexend:wght@200;400&display=swap');
+
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  .animate-gradient {
+    background-clip: text ;
+    -webkit-background-clip: text;
+    background-size: 300% 300%;
+    animation: gradient 4s ease-in-out infinite;
+  }
+  
+  
+  
+  
+  
+  
+  
