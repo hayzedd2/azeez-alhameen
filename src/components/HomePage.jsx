@@ -1,9 +1,21 @@
 import React from "react";
-import astronaut from "../images/pngwing.com (3)-451c8d7b.png";
+// import astronaut from "../images/pngwing.com (3)-451c8d7b.jpg";
+import astronaut from '../images/astronaut.png'
 import bgImg from "../images/IMG_4135.png";
 import Navbar from "./Navbar";
 import { gsap } from "gsap";
+import SplitType from 'split-type'
+import { useEffect } from "react";
 const HomePage = () => {
+
+  useEffect(() => {
+    const text2 = SplitType.create('.homepage-text');
+    gsap.from(text2.words, {
+      y: 90,
+      duration: 0.6,
+      stagger: 0.02,
+    });
+  }, []); 
  
   return (
     <div>
@@ -28,7 +40,7 @@ const HomePage = () => {
                
               </h3>
 
-              <h4 className="font-kumb mt-4  text-white max-w-none md:max-w-4xl mx-auto text-[1.05rem] md:text-[1.15rem] font-[500]  leading-[1.9rem] md:leading-[2.1rem]">
+              <h4 className="font-kumb mt-4  text-white max-w-none md:max-w-4xl mx-auto text-[1.05rem] md:text-[1.15rem] font-[500]  leading-[1.9rem] md:leading-[2.1rem] homepage-text overflow-hidden">
                 I'm a passionate and creative frontend developer with a keen eye
                 for design and a zeal for translating ideas into beautiful,
                 functional websites, I'm dedicated to enhancing user experiences

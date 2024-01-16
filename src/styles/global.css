@@ -20,7 +20,15 @@
     animation: gradient 4s ease-in-out infinite;
   }
 
+  .homepage-text .line{
+    display: inline-block;
+    overflow: hidden;
+  }
   
+  .about-text .line{
+    display: inline-block;
+    overflow: hidden;
+  }
   
   
   

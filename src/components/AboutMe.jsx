@@ -8,8 +8,35 @@ import { BiLogoJavascript } from "react-icons/bi";
 import { BiLogoTailwindCss } from "react-icons/bi";
 import { BiLogoReact } from "react-icons/bi";
 import { BiLogoDjango } from "react-icons/bi";
+import gsap from "gsap";
+import { useEffect } from "react";
+import SplitType from "split-type";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 const AboutMe = () => {
+  useEffect(() => {
+    const text2 = SplitType.create(".about-text");
+
+    // Create a ScrollTrigger instance
+    gsap.registerPlugin(ScrollTrigger);
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: text2.words, // Align trigger with the split text elements
+        start: "top 80%",
+        end: "bottom center",
+        scrub: true,
+        markers: true,
+        toggleActions: "play none none none",
+      },
+    });
+
+
+    tl.from(text2.words, {
+      y: 90,
+      duration: 0.8,
+      stagger: 0.05,
+    });
+  }, []);
   const technologyObj = [
     {
       skillName: "HTML",
@@ -38,33 +65,27 @@ const AboutMe = () => {
     },
     {
       skillName: "Git and Github",
-      skillIcon: <BsGithub/>,
+      skillIcon: <BsGithub />,
     },
-    
   ];
   return (
-    <div className=" text-white bg-[#050816] min-h-[80vh] flex items-center justify-center md:py-10 py-0 pb-7 md:pb-0" id="about">
+    <div
+      className=" text-white bg-[#050816] min-h-[80vh] flex items-center justify-center md:py-10 py-0 pb-7 md:pb-0"
+      id="about"
+    >
       <div className="container max-w-7xl flex px-3 md:px-0 flex-col-reverse gap-6 md:flex-row items-center mx-auto justify-center">
         <div className="basis-3/6">
           <img src={earth} alt="" className="md:w-[33rem] w-[22rem]" />
         </div>
         <div className="basis-3/6">
-          <h1 className="md:text-[1.5rem] text-[1.1rem]  max-w-xl font-lexend text-white ">
+          <h1 className="md:text-[1.8rem] text-[1.2rem]  max-w-xl font-kumb text-white ">
             Why i should be in your next{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#80dfff] to-[#ffcccc] via-[#df80ff] animate-gradient">
-              project 
+              project
             </span>
           </h1>
           <div className="flex flex-col gap-5 font-[400] md:gap-6 md:my-2 my-1.5  max-w-2xl">
-            <p className="font-lexend text-[0.8rem] leading-normal md:text-[0.95rem] md:leading-7">
-              I'm <strong>Azeez Alhameen</strong>, a passionate and innovative
-              frontend developer eager to contribute my skills to your next
-              project. With a deep-rooted love for crafting user-friendly and
-              visually stunning web applications, I bring creativity and
-              expertise to every project I undertake
-            </p>
-
-            <p className="font-lexend text-[0.8rem]  leading-normal md:text-[0.95rem] md:leading-7">
+            <p className="font-kumb text-[1.05rem] md:text-[1.15rem] font-[500]  leading-[1.9rem] md:leading-[2.1rem] about-text overflow-hidden">
               What sets me apart as a frontend developer is my commitment to
               user-centered design and my ability to collaborate effectively
               within cross-functional teams. When you bring me onto your
