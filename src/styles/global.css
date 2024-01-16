@@ -25,9 +25,9 @@
     overflow: hidden;
   }
   
-  .about-text .line{
-    display: inline-block;
-    overflow: hidden;
+ 
+  .about-text .word{
+    opacity: 0.2;
   }
   
   

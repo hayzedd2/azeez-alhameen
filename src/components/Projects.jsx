@@ -7,21 +7,24 @@ import sandbox from "../images/screencapture-file-C-Users-pc-Desktop-frontend-pr
 import { HiMiniArrowTopRightOnSquare } from "react-icons/hi";
 import { BsBoxArrowUp, BsGithub } from "react-icons/bs";
 import netflix from "../images/screencapture-file-C-Users-pc-Desktop-netflix-clone-index-html-2023-10-13-09_22_01.png";
+import habeeb from '../images/screencapture-habeeb-azeez-vercel-app-2024-01-16-20_16_01.png'
 const Projects = () => {
   const projectsObj = [
+    // {
+    //   projectName: "Getlinked",
+    //   projectPicture: getlinked,
+    //   skills: ["Tailwind-css", "React"],
+    //   LiveLink: "https://getlinked-project-clone.vercel.app/",
+    //   GithubLink: "https://github.com/hayzedd2/Getlinked-project-clone.git",
+    //   about : "Getlinked is a hackathon project that requires you to convert breath-taking figma design into code."
+    // },
     {
-      projectName: "Getlinked",
-      projectPicture: getlinked,
-      skills: ["Tailwind-css", "React"],
-      LiveLink: "https://getlinked-project-clone.vercel.app/",
-      GithubLink: "https://github.com/hayzedd2/Getlinked-project-clone.git",
-    },
-    {
-      projectName: "Netflix Clone",
-      projectPicture: netflix,
-      skills: ["Html", "CSS", "Javascript"],
-      LiveLink: "https://netflix-clone-flax-kappa-34.vercel.app/",
+      projectName: "Habeeb Portfolio",
+      projectPicture: habeeb,
+      skills: ["React", "Tailwind",],
+      LiveLink: "https://habeeb-azeez.vercel.app",
       GithubLink: "https://github.com/hayzedd2/Netflix-clone.git",
+      about : "A portfolio website for my brother Habeeb, a product designer .It showcases his skills and experience"
     },
     {
       projectName: "RestCountries",
@@ -29,6 +32,7 @@ const Projects = () => {
       skills: ["Chakra-UI", "RestCountries Api", "React"],
       LiveLink: "https://restcountries-tau.vercel.app/",
       GithubLink: "https://github.com/hayzedd2/Restcountries.git",
+      about : "Rest countries is a web application that allows users to get information about any country , see all countries and also search for countries."
     },
 
     {
@@ -37,6 +41,7 @@ const Projects = () => {
       skills: ["Html", "CSS", "Javascript"],
       LiveLink: "https://sandbox-tau-five.vercel.app/",
       GithubLink: "https://github.com/hayzedd2/Sandbox.git",
+      about : "Sandbox is a clone of the sandbox website"
     },
   ];
   return (
@@ -46,17 +51,15 @@ const Projects = () => {
       id="projects"
     >
       <div className="container max-w-7xl mx-auto py-10">
-        <div className="flex flex-col gap-1 w-full items-center  justify-center md:text-center text-left px-2 md:px-0">
-          <h2 className="text-[1.05rem] md:text-[1.3rem]  text-transparent bg-clip-text bg-gradient-to-r from-[#80dfff] to-[#ffcccc] via-[#df80ff] animate-gradient font-lexend">
-            Check Out my Projects
+        <div className="flex flex-col gap-1 w-full md:text-left  text-left px-5 md:px-0">
+          <h2 className="text-[1.05rem] md:text-[1.3rem] bg-[#004d4d]  w-[10rem] md:w-[11rem] flex items-center justify-center font-[700] gap-2  p-2 text-[#80dfff] font-kumb">
+            <p className="text-[0.95rem]">O2.</p>
+            <p>My Projects</p>
           </h2>
-          <p className="md:text-[1.2rem] text-[0.75rem]  font-lexend flex items-center justify-center gap-2 text-white">
-            Here are some few projects i have worked on.{" "}
-            <img src={jet} className="md:w-10 w-6" alt="" />
-          </p>
+         
         </div>
         <div
-          className="grid md:grid-cols-2 px-5 grid-cols-1  lg:grid-cols-4 w-full gap-9 md:gap-4 mt-10"
+          className="grid md:grid-cols-2 md:px-0 px-5 grid-cols-1  lg:grid-cols-3 w-full gap-10 md:gap-4 mt-10"
           style={{ placeItems: "center" }}
         >
           {projectsObj.map((pro) => {
@@ -68,37 +71,40 @@ const Projects = () => {
                   style={{ objectFit: "contain" }}
                   alt=""
                 />
-                <p className="text-white mt-3 font-lexend capitalize text-lg font-semibold">
+                <div className="lower-part py-2 px-4 shadow mt-2 rounded-md bg-[#004d4d]">
+                <h6 className="text-white mt-3 font-kumb capitalize text-lg font-[500]">
                   {pro.projectName}
-                </p>
-                <div className="flex gap-4 mt-2">
-                  <p className=" flex font-lexend text-white">
+                </h6>
+                <p className="mb-3 mt-1 text-[0.95rem] font-kumb font-[400] text-gray-200">{pro.about}</p>
+                <div className="flex gap-4 mt-6">
+                  <p className=" flex font-lexend text-[#80dfff]">
                     <a
                       href={pro.LiveLink}
                       target="_blank"
                       className="flex gap-2 items-center "
                     >
-                      Live Url <BsBoxArrowUp />
+                      <BsBoxArrowUp />
                     </a>
                   </p>
-                  <p className="flex font-lexend text-white">
+                  <p className="flex font-lexend text-[#80dfff]">
                     <a
                       href={pro.GithubLink}
                       target="_blank"
                       className="flex gap-2 items-center "
                     >
-                      View Code <BsGithub />
+                      <BsGithub />
                     </a>
                   </p>
                 </div>
-                <div className=" flex gap-2 mt-2 flex-wrap items-center  text-[#80dfff] font-lexend text-sm">
+                <div className=" flex gap-2 my-5 flex-wrap items-center  text-[#80dfff] font-lexend text-sm">
                   {pro.skills.map((skill) => {
                     return (
-                      <p className="bg-[#004d4d] rounded-md p-2 flex gap-1">
+                      <p className="border text-white text-[0.85rem] border-[#80dfff] rounded-[4rem] px-2 py-1 flex gap-1">
                         {skill}
                       </p>
                     );
                   })}
+                </div>
                 </div>
                 <div></div>
               </div>
