@@ -49,7 +49,7 @@ const AboutMe = () => {
           <img src={earth} alt="" className="md:w-[33rem] w-[22rem]" />
         </div>
         <div className="basis-3/6">
-          <h1 className="md:text-[1.5rem] text-[1.3rem]  max-w-xl font-lexend text-white ">
+          <h1 className="md:text-[1.5rem] text-[1.1rem]  max-w-xl font-lexend text-white ">
             Why i should be in your next{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#80dfff] to-[#ffcccc] via-[#df80ff] animate-gradient">
               project 

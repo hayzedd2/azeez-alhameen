@@ -13,6 +13,7 @@ module.exports = {
       fontFamily: {
         jost: ["Jost", "sans-serif"],
         lexend: ["Lexend", "sans-serif"],
+        kumb: ["Kumbh Sans", "sans-serif"],
       },
       colors: {
         normalcolor: {

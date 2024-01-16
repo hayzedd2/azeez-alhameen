@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@clerk/clerk-react": "^4.26.1",
+    "@studio-freight/lenis": "^1.0.33",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -11,6 +12,8 @@
     "axios": "^1.4.0",
     "bootstrap": "^5.3.1",
     "firebase": "^10.4.0",
+    "framer-motion": "^10.16.4",
+    "gsap": "^3.12.4",
     "postcss": "^8.4.27",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
