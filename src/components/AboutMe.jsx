@@ -4,7 +4,7 @@ import { BsGithub } from "react-icons/bs";
 import earth from "../images/astronaut-reading-books-nikolay-todorov-transparent.png";
 import { AiOutlineHtml5 } from "react-icons/ai";
 import { BiLogoCss3 } from "react-icons/bi";
-import { BiLogoJavascript } from "react-icons/bi";
+import { BiLogoJavascript ,BiLogoTypescript } from "react-icons/bi";
 import { BiLogoTailwindCss } from "react-icons/bi";
 import { BiLogoReact } from "react-icons/bi";
 import { BiLogoDjango } from "react-icons/bi";
@@ -61,8 +61,8 @@ const AboutMe = () => {
       skillIcon: <BiLogoDjango />,
     },
     {
-      skillName: "Git and Github",
-      skillIcon: <BsGithub />,
+      skillName: "Typescript",
+      skillIcon: <BiLogoTypescript/>
     },
   ];
   return (
@@ -115,7 +115,7 @@ const AboutMe = () => {
               <div className="flex gap-3 flex-wrap  md:max-w-xl mt-3">
                 {technologyObj.map((tech) => {
                   return (
-                    <div className="bg-[#004d4d] rounded-md p-2 flex gap-1 items-center justify-center text-[#80dfff] font-lexend text-sm md:text-base">
+                    <div className="bg-[#004d4d] rounded-md p-2 flex gap-1 items-center justify-center text-[#80dfff] font-lexend text-base md:text-base">
                       <p>{tech.skillName}</p>
                       <p className="text-base md:text-xl">{tech.skillIcon}</p>
                     </div>
