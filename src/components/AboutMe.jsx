@@ -83,14 +83,14 @@ const AboutMe = () => {
             <img src={earth} alt="" className="md:w-[33rem] w-[22rem]" />
           </div>
           <div className="basis-3/6 ">
-            <h1 className="md:text-[1.8rem] text-[1.4rem]  max-w-xl font-kumb text-white ">
+            <h1 className="md:text-[1.8rem] text-[1.5rem]  max-w-xl font-kumb text-white ">
               Why i should be in your next{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#80dfff] to-[#ffcccc] via-[#df80ff] animate-gradient">
                 project
               </span>
             </h1>
             <div className="flex flex-col gap-5 font-[400] md:gap-6 md:my-2 my-1.5  max-w-2xl">
-              <p className="font-kumb text-[1.1rem] md:text-[1.15rem] font-[500] mb-3  leading-[1.9rem] md:leading-[2.1rem] about-text overflow-hidden">
+              <p className="font-kumb text-[1rem] md:text-[1.15rem] font-[500] mb-3  leading-[1.9rem] md:leading-[2.1rem] about-text overflow-hidden">
                 What sets me apart as a frontend developer is my commitment to
                 user-centered design and my ability to collaborate effectively
                 within cross-functional teams. When you bring me onto your
