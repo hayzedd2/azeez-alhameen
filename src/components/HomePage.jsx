@@ -36,11 +36,8 @@ const HomePage = () => {
                   </h2>
                 </span>{" "}
               </h6>
-              <h3 className="md:text-[1.8rem] mb-2 md:my-0 text-[1.3rem] font-kumb font-[400] md:text-[600]  text-transparent bg-clip-text bg-gradient-to-r from-[#ffcccc] to-[#80dfff] via-[#df80ff] animate-gradient">
-               
-              </h3>
-
-              <h4 className="font-kumb mt-4  text-white max-w-none md:max-w-4xl mx-auto text-[1.05rem] md:text-[1.15rem] font-[500]  leading-[1.9rem] md:leading-[2.1rem] homepage-text overflow-hidden">
+            
+              <h4 className="font-kumb mt-4  text-white  text-[1.05rem] md:text-[1.15rem] font-[500]  leading-[1.9rem] md:leading-[2.1rem] homepage-text overflow-hidden">
                 I'm a passionate and creative frontend developer with a keen eye
                 for design and a zeal for translating ideas into beautiful,
                 functional websites, I'm dedicated to enhancing user experiences
