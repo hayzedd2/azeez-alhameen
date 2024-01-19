@@ -24,16 +24,53 @@ const AboutMe = () => {
         trigger: text2.words, // Align trigger with the split text elements
         start: "top 90%",
         end: "bottom center",
-        scrub: true,
         toggleActions: "play none none none",
+        scrub : true,
       },
     });
     tl.to(text2.words, {
       opacity: 1,
-      duration: 0.8,
+      duration: 0.5,
       stagger: 0.05,
     });
+    const tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".astronaut2",
+        start: "top 80%",
+      },
+    });
+    tl2.fromTo(".astronaut2", {
+      opacity: 0,
+      y: 30,
+      duration: 0.8,
+      ease : "power4.inOut"
+    },{
+       opacity: 1,
+       y: 0,
+       duration: 0.8,
+       ease : "power4.inOut"
+    });
+    const tl3 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".tech-group",
+        start: "top 90%",
+      },
+    });
+    tl3.fromTo(".tech-group", {
+      opacity: 0,
+      y: 30,
+      duration: 0.8,
+      ease : "power4.inOut"
+    },{
+       opacity: 1,
+       y: 0,
+       duration: 0.8,
+       ease : "power4.inOut"
+    });
   }, []);
+
+ 
+ 
   const technologyObj = [
     {
       skillName: "HTML",
@@ -80,7 +117,7 @@ const AboutMe = () => {
       </div>
         <div className=" flex  flex-col-reverse gap-6 md:flex-row items-center mx-auto justify-center">
           <div className="basis-3/6">
-            <img src={earth} alt="" className="md:w-[33rem] w-[22rem]" />
+            <img src={earth} alt="" className="md:w-[33rem] w-[22rem] astronaut2" />
           </div>
           <div className="basis-3/6 ">
             <h1 className="md:text-[1.8rem] text-[1.5rem]  max-w-xl font-kumb text-white ">
@@ -112,7 +149,7 @@ const AboutMe = () => {
               <h2 className="font-semibold font-kumb text-xl text-white">
                 Technologies
               </h2>
-              <div className="flex gap-3 flex-wrap  md:max-w-xl mt-3">
+              <div className="flex gap-3 flex-wrap  md:max-w-xl mt-3 tech-group">
                 {technologyObj.map((tech) => {
                   return (
                     <div className="bg-[#004d4d] rounded-md p-2 flex gap-1 items-center justify-center text-[#80dfff] font-lexend text-base md:text-base">

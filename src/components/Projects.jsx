@@ -7,7 +7,9 @@ import sandbox from "../images/screencapture-file-C-Users-pc-Desktop-frontend-pr
 import { HiMiniArrowTopRightOnSquare } from "react-icons/hi";
 import { BsBoxArrowUp, BsGithub } from "react-icons/bs";
 import netflix from "../images/screencapture-file-C-Users-pc-Desktop-netflix-clone-index-html-2023-10-13-09_22_01.png";
-import habeeb from '../images/screencapture-habeeb-azeez-vercel-app-2024-01-16-20_16_01.png'
+import habeeb from "../images/screencapture-habeeb-azeez-vercel-app-2024-01-16-20_16_01.png";
+import { FiGithub } from "react-icons/fi";
+import { BsBoxArrowUpRight } from "react-icons/bs";
 const Projects = () => {
   const projectsObj = [
     // {
@@ -21,10 +23,11 @@ const Projects = () => {
     {
       projectName: "Habeeb Portfolio",
       projectPicture: habeeb,
-      skills: ["React", "Tailwind",],
+      skills: ["React", "Tailwind"],
       LiveLink: "https://habeeb-azeez.vercel.app",
       GithubLink: "https://github.com/hayzedd2/Netflix-clone.git",
-      about : "A portfolio website for my brother Habeeb, a product designer .It showcases his skills and experience"
+      about:
+        "A portfolio website for my brother Habeeb, a product designer .It showcases his skills and experience",
     },
     {
       projectName: "RestCountries",
@@ -32,7 +35,8 @@ const Projects = () => {
       skills: ["Chakra-UI", "RestCountries Api", "React"],
       LiveLink: "https://restcountries-tau.vercel.app/",
       GithubLink: "https://github.com/hayzedd2/Restcountries.git",
-      about : "Rest countries is a web application that allows users to get information about any country , see all countries and also search for countries."
+      about:
+        "Rest countries is a web application that allows users to get information about any country , see all countries and also search for countries.",
     },
 
     {
@@ -41,7 +45,7 @@ const Projects = () => {
       skills: ["Html", "CSS", "Javascript"],
       LiveLink: "https://sandbox-tau-five.vercel.app/",
       GithubLink: "https://github.com/hayzedd2/Sandbox.git",
-      about : "Sandbox is a clone of the sandbox website"
+      about: "Sandbox is a clone of the sandbox website",
     },
   ];
   return (
@@ -50,63 +54,69 @@ const Projects = () => {
       style={{ backgroundImage: `url(${bgImg})` }}
       id="projects"
     >
-      <div className="container max-w-7xl mx-auto py-10">
+      <div className="container max-w-6xl mx-auto py-10">
         <div className="flex flex-col gap-1 w-full md:text-left  text-left px-5 md:px-0">
           <h2 className="text-[1.05rem] md:text-[1.3rem] bg-[#004d4d]  w-[10rem] md:w-[11rem] flex items-center justify-center font-[700] gap-2  p-2 text-[#80dfff] font-kumb">
             <p className="text-[0.95rem]">O2.</p>
             <p>My Projects</p>
           </h2>
-         
         </div>
         <div
-          className="grid md:grid-cols-2 md:px-0 px-5 grid-cols-1  lg:grid-cols-3 w-full gap-10 md:gap-4 mt-10"
+          className=" w-full flex flex-col gap-10 mt-10"
           style={{ placeItems: "center" }}
         >
-          {projectsObj.map((pro) => {
+          {projectsObj.map((pro, index) => {
+            const isSecondObject = index === 1;
+            const containerClasses = `w-full md:flex-nowrap flex-wrap flex pmd:text-left  text-left px-5 md:px-0 md:gap-5 gap-2 max-w-5xl items-center justify-center ${
+              isSecondObject ? "flex-row-reverse" : ""
+            }`;
+
             return (
-              <div>
+              <div className={containerClasses} key={index}>
                 <img
                   src={pro.projectPicture}
-                  className="rounded-xl w-auto  h-[14rem]"
-                  style={{ objectFit: "contain" }}
+                  className="h-[12rem] w-full basis-[100%] md:basis-[40%]"
+                  style={{ objectFit: "cover" }}
                   alt=""
                 />
-                <div className="lower-part py-2 px-4 shadow mt-2 rounded-md bg-[#004d4d]">
-                <h6 className="text-white mt-3 font-kumb capitalize text-lg font-[500]">
-                  {pro.projectName}
-                </h6>
-                <p className="mb-3 mt-1 text-[0.95rem] font-kumb font-[400] text-gray-200">{pro.about}</p>
-                <div className="flex gap-4 mt-6">
-                  <p className=" flex font-lexend text-[#80dfff]">
-                    <a
-                      href={pro.LiveLink}
-                      target="_blank"
-                      className="flex gap-2 items-center "
-                    >
-                      <BsBoxArrowUp />
-                    </a>
+                <div className="lower-part py-3 px-4 md:px-6 rounded-[8px] bg-[#004d4d] basis-[100%] md:basis-[60%] shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px]">
+                  <h6 className="text-white mt-3 font-kumb capitalize text-[1.2rem] md:text-[1.5rem] font-[500] mb-2">
+                    {pro.projectName}
+                  </h6>
+                  <p className="mb-3 mt-1 text-[0.95rem] max-w-[500px] font-kumb font-[400] text-gray-200">
+                    {pro.about}
                   </p>
-                  <p className="flex font-lexend text-[#80dfff]">
-                    <a
-                      href={pro.GithubLink}
-                      target="_blank"
-                      className="flex gap-2 items-center "
-                    >
-                      <BsGithub />
-                    </a>
-                  </p>
-                </div>
-                <div className=" flex gap-2 my-5 flex-wrap items-center  text-[#80dfff] font-lexend text-sm">
-                  {pro.skills.map((skill) => {
-                    return (
-                      <p className="border text-white text-[0.85rem] border-[#80dfff] rounded-[4rem] px-2 py-1 flex gap-1">
+                  <div className="flex gap-4 mt-6">
+                    <p className="flex font-lexend text-[#80dfff]">
+                      <a
+                        href={pro.LiveLink}
+                        target="_blank"
+                        className="flex gap-2 items-center "
+                      >
+                        <BsBoxArrowUpRight />
+                      </a>
+                    </p>
+                    <p className="flex font-lexend text-[#80dfff]">
+                      <a
+                        href={pro.GithubLink}
+                        target="_blank"
+                        className="flex gap-2 items-center "
+                      >
+                        <FiGithub />
+                      </a>
+                    </p>
+                  </div>
+                  <div className="flex gap-2 my-5 flex-wrap items-center  text-[#80dfff] font-lexend text-sm">
+                    {pro.skills.map((skill) => (
+                      <p
+                        key={skill}
+                        className="border text-white text-[0.8rem] border-gray-300 rounded-[8px] px-2 py-[0.15rem] flex gap-1"
+                      >
                         {skill}
                       </p>
-                    );
-                  })}
+                    ))}
+                  </div>
                 </div>
-                </div>
-                <div></div>
               </div>
             );
           })}
