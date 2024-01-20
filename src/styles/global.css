@@ -30,7 +30,9 @@
     opacity: 0.2;
   }
   
-  
+  .bg-red-800:hover {
+    transform: translateY(-5px);
+  }
   
   
   

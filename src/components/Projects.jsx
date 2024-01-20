@@ -12,14 +12,7 @@ import { FiGithub } from "react-icons/fi";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 const Projects = () => {
   const projectsObj = [
-    // {
-    //   projectName: "Getlinked",
-    //   projectPicture: getlinked,
-    //   skills: ["Tailwind-css", "React"],
-    //   LiveLink: "https://getlinked-project-clone.vercel.app/",
-    //   GithubLink: "https://github.com/hayzedd2/Getlinked-project-clone.git",
-    //   about : "Getlinked is a hackathon project that requires you to convert breath-taking figma design into code."
-    // },
+    
     {
       projectName: "Habeeb Portfolio",
       projectPicture: habeeb,
@@ -40,12 +33,12 @@ const Projects = () => {
     },
 
     {
-      projectName: "Sandbox",
-      projectPicture: sandbox,
-      skills: ["Html", "CSS", "Javascript"],
-      LiveLink: "https://sandbox-tau-five.vercel.app/",
-      GithubLink: "https://github.com/hayzedd2/Sandbox.git",
-      about: "Sandbox is a clone of the sandbox website",
+      projectName: "Getlinked",
+      projectPicture: getlinked,
+      skills: ["Tailwind-css", "React"],
+      LiveLink: "https://getlinked-project-clone.vercel.app/",
+      GithubLink: "https://github.com/hayzedd2/Getlinked-project-clone.git",
+      about : "Getlinked is a hackathon project that requires you to convert breath-taking figma design into code."
     },
   ];
   return (
