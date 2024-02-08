@@ -1,7 +1,7 @@
 import React from "react";
 // import astronaut from "../images/pngwing.com (3)-451c8d7b.jpg";
 import astronaut from "../images/astronaut.png";
-import bgImg from "../images/IMG_4135.png";
+import bgImg from "../images/IMG_4135-min.png";
 import Navbar from "./Navbar";
 import { gsap } from "gsap";
 import SplitType from "split-type";
@@ -43,7 +43,7 @@ const HomePage = () => {
                 </span>{" "}
               </h6>
 
-              <h4 className="homepage-text text-white">
+              <h4 className="homepage-text text-white font-kumb text-[1rem] md:text-[1.15rem] font-[500] mb-3  leading-[1.9rem] md:leading-[2.1rem] ">
                 I'm a passionate and creative frontend developer with a keen eye
                 for design and a zeal for translating ideas into beautiful,
                 functional websites, I'm dedicated to enhancing user experiences
