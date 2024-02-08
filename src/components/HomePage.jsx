@@ -1,22 +1,28 @@
 import React from "react";
 // import astronaut from "../images/pngwing.com (3)-451c8d7b.jpg";
-import astronaut from '../images/astronaut.png'
+import astronaut from "../images/astronaut.png";
 import bgImg from "../images/IMG_4135.png";
 import Navbar from "./Navbar";
 import { gsap } from "gsap";
-import SplitType from 'split-type'
+import SplitType from "split-type";
 import { useEffect } from "react";
 const HomePage = () => {
-
   useEffect(() => {
-    const text2 = SplitType.create('.homepage-text');
-    gsap.from(text2.words, {
+    gsap.registerPlugin(SplitType);
+    const text2 = new SplitType(".homepage-text", { type: "words" });
+    const tl = gsap.timeline({ paused: true });
+    tl.from(text2.words, {
       y: 90,
       duration: 0.6,
       stagger: 0.02,
     });
-  }, []); 
- 
+    tl.play();
+    tl.eventCallback("onComplete", () => {
+      SplitType.revert(".homepage-text");
+      
+    });
+  }, []);
+
   return (
     <div>
       <div
@@ -28,7 +34,7 @@ const HomePage = () => {
           <div className="w-full   flex-col items-center justify-center basis-3/6">
             <div className=" text-left md:text-left">
               <h6 className=" font-kumb text-white text-[1.45rem] md:text-[2.5rem]  p-0 flex flex-col  font-[200]">
-                Hi there, I am{" "} Alhameen
+                Hi there, I am Alhameen
                 <span>
                   <h2 className="md:text-[4rem] font-kumb text-[2.4rem] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#80dfff] to-[#ffcccc] via-[#df80ff] animate-gradient">
                     {/* Azeez Alhameen */}
@@ -36,8 +42,8 @@ const HomePage = () => {
                   </h2>
                 </span>{" "}
               </h6>
-            
-              <h4 className="font-kumb mt-4  text-white  text-[1.05rem] md:text-[1.15rem] font-[500]  leading-[1.9rem] md:leading-[2.1rem] homepage-text overflow-hidden">
+
+              <h4 className="homepage-text text-white">
                 I'm a passionate and creative frontend developer with a keen eye
                 for design and a zeal for translating ideas into beautiful,
                 functional websites, I'm dedicated to enhancing user experiences
@@ -46,7 +52,6 @@ const HomePage = () => {
             </div>
           </div>
           <div className="ml-8 md:ml-0 mt-10 basis-3/6 md:flex block md:items-end md:justify-end relative">
-            
             <img
               src={astronaut}
               className=" md:w-[35rem] w-[27rem] astronaut"
