@@ -3,26 +3,7 @@ import React from "react";
 import astronaut from "../images/astronaut.png";
 import bgImg from "../images/IMG_4135-min.png";
 import Navbar from "./Navbar";
-import { gsap } from "gsap";
-import SplitType from "split-type";
-import { useEffect } from "react";
 const HomePage = () => {
-  useEffect(() => {
-    gsap.registerPlugin(SplitType);
-    const text2 = new SplitType(".homepage-text", { type: "words" });
-    const tl = gsap.timeline({ paused: true });
-    tl.from(text2.words, {
-      y: 90,
-      duration: 0.6,
-      stagger: 0.02,
-    });
-    tl.play();
-    tl.eventCallback("onComplete", () => {
-      SplitType.revert(".homepage-text");
-      
-    });
-  }, []);
-
   return (
     <div>
       <div

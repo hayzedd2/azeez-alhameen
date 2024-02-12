@@ -4,73 +4,12 @@ import { BsGithub } from "react-icons/bs";
 import earth from "../images/astronaut-reading-books-nikolay-todorov-transparent.png";
 import { AiOutlineHtml5 } from "react-icons/ai";
 import { BiLogoCss3 } from "react-icons/bi";
-import { BiLogoJavascript ,BiLogoTypescript } from "react-icons/bi";
+import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
 import { BiLogoTailwindCss } from "react-icons/bi";
 import { BiLogoReact } from "react-icons/bi";
 import { BiLogoDjango } from "react-icons/bi";
-import gsap from "gsap";
-import { useEffect } from "react";
-import SplitType from "split-type";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 const AboutMe = () => {
-  useEffect(() => {
-    const text2 = SplitType.create(".about-text");
-
-    // Create a ScrollTrigger instance
-    gsap.registerPlugin(ScrollTrigger);
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: text2.words, // Align trigger with the split text elements
-        start: "top 90%",
-        end: "bottom center",
-        toggleActions: "play none none none",
-        scrub : true,
-      },
-    });
-    tl.to(text2.words, {
-      opacity: 1,
-      duration: 0.5,
-      stagger: 0.05,
-    });
-    const tl2 = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".astronaut2",
-        start: "top 80%",
-      },
-    });
-    tl2.fromTo(".astronaut2", {
-      opacity: 0,
-      y: 30,
-      duration: 0.8,
-      ease : "power4.inOut"
-    },{
-       opacity: 1,
-       y: 0,
-       duration: 0.8,
-       ease : "power4.inOut"
-    });
-    const tl3 = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".tech-group",
-        start: "top 90%",
-      },
-    });
-    tl3.fromTo(".tech-group", {
-      opacity: 0,
-      y: 30,
-      duration: 0.8,
-      ease : "power4.inOut"
-    },{
-       opacity: 1,
-       y: 0,
-       duration: 0.8,
-       ease : "power4.inOut"
-    });
-  }, []);
-
- 
- 
   const technologyObj = [
     {
       skillName: "HTML",
@@ -99,7 +38,7 @@ const AboutMe = () => {
     },
     {
       skillName: "Typescript",
-      skillIcon: <BiLogoTypescript/>
+      skillIcon: <BiLogoTypescript />,
     },
   ];
   return (
@@ -107,17 +46,20 @@ const AboutMe = () => {
       className=" text-white bg-[#050816] min-h-[80vh] flex flex-col md:py-10 py-0 pb-7 md:pb-0"
       id="about"
     >
-      
       <div className="container max-w-7xl mx-auto px-3 md:px-0">
-      <div className="my-3">
-        <h2 className="text-[1.05rem] md:text-[1.3rem] bg-[#004d4d]  w-[10rem] flex gap-2 items-center justify-center font-[700]  p-2 text-[#80dfff] font-kumb">
-          <p className="text-[0.95rem]">O1.</p>
-          <p>About Me</p>
-        </h2>
-      </div>
+        <div className="my-3">
+          <h2 className="text-[1.05rem] md:text-[1.3rem] bg-[#004d4d]  w-[10rem] flex gap-2 items-center justify-center font-[700]  p-2 text-[#80dfff] font-kumb">
+            <p className="text-[0.95rem]">O1.</p>
+            <p>About Me</p>
+          </h2>
+        </div>
         <div className=" flex  flex-col-reverse gap-6 md:flex-row items-center mx-auto justify-center">
           <div className="basis-3/6">
-            <img src={earth} alt="" className="md:w-[33rem] w-[22rem] astronaut2" />
+            <img
+              src={earth}
+              alt=""
+              className="md:w-[33rem] w-[22rem] astronaut2"
+            />
           </div>
           <div className="basis-3/6 ">
             <h1 className="md:text-[1.8rem] text-[1.5rem]  max-w-xl font-kumb text-white ">
