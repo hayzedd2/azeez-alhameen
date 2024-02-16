@@ -25,8 +25,7 @@ const HomePage = () => {
               </h6>
 
               <h4 className="homepage-text text-white font-kumb text-[1rem] md:text-[1.15rem] font-[500] mb-3  leading-[1.9rem] md:leading-[2.1rem] ">
-                I'm a passionate and creative frontend developer with a keen eye
-                for design and a zeal for translating ideas into beautiful,
+                I'm a creative frontend developer with a zeal for translating ideas into beautiful,
                 functional websites, I'm dedicated to enhancing user experiences
                 through code.
               </h4>

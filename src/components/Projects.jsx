@@ -69,7 +69,7 @@ const Projects = () => {
                 <img
                   src={pro.projectPicture}
                   className="h-[12rem] w-full basis-[100%] md:basis-[40%]"
-                  style={{ objectFit: "cover" }}
+                  style={{ objectFit: "contain" }}
                   alt=""
                 />
                 <div className="lower-part py-3 px-4 md:px-6 rounded-[8px] bg-[#004d4d] basis-[100%] md:basis-[60%] shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px]">
